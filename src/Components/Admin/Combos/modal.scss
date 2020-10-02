@@ -1,0 +1,31 @@
+.container-modal {
+  width: 500px;
+  .form-modal {
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  .form-group {
+    margin-top: 10px;
+  }
+  .header-modal {
+    position: relative;
+    button {
+      position: absolute;
+      top: -15px;
+      right: 5px;
+    }
+  }
+  .label-width-input {
+    label {
+      display: block;
+    }
+  }
+}
+.group-main-bebidas {
+  h3 {
+    text-align: center;
+  }
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}

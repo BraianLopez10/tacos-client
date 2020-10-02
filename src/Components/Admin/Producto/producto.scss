@@ -1,0 +1,76 @@
+.container-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: minmax(300px, auto);
+	gap: 1em;
+	.producto-container-admin {
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		background-color: #f5efef;
+		.header-prod {
+			display: flex;
+			justify-content: space-between;
+			height: 50px;
+			background-color: #ffcb8e;
+			button {
+				margin: 5px;
+			}
+		}
+		.producto-precio {
+			font-size: 1.4em;
+			background-color: #931a25;
+			margin-top: 10px;
+			color: white;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			p {
+				margin: 0;
+				padding: 0;
+			}
+			height: 50px;
+			font-weight: bold;
+			font-family: monospace;
+		}
+		.producto-titulo {
+			font-family: monospace;
+			font-size: 1.3em;
+			text-transform: uppercase;
+		}
+		.producto-pie {
+			padding: 10px;
+			ul {
+				margin: 0;
+				padding: 0;
+			}
+			li {
+				list-style: none;
+				display: inline-block;
+				margin-left: 5px;
+				text-transform: capitalize;
+			}
+		}
+		.producto-image {
+			width: 200px;
+			height: 200px;
+			margin: auto;
+			display: flex;
+			.desc-prod {
+				background-color: whitesmoke;
+			}
+			align-content: flex-start;
+			img {
+				border-radius: 5px;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+	}
+}
+@media screen and (max-width: 425px) {
+	.container-grid {
+		grid-template-columns: repeat(1, 1fr);
+	}
+}

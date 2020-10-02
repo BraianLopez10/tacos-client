@@ -1,0 +1,62 @@
+.right-bar{
+    position: fixed;
+    background-color:#181715;
+    border-top: 5px solid white ;
+    transition: all 500ms ease;
+    left: 0px;
+    top: 0;
+    z-index: 999;
+    height: 100vh;
+    width: 50%;
+    a{
+        text-decoration: none;
+        color: white;
+    }
+    button {
+        border-radius: 10px;
+    }
+    li{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    .menu {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    .menu {
+        li {
+            padding: 10px;
+            margin: 10px;
+            background-color: yellow;
+            border-radius: 10px;
+            text-transform: uppercase;
+            color: black;
+            font-weight: bold;
+            text-align: center;
+            font-family: 'Anton', sans-serif;
+            letter-spacing: 5px;
+            cursor: pointer;
+        }  
+    } 
+
+    .redes-right{
+        font-family: 'Anton', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        text-align: center;
+        color: white;
+        ul{
+            margin: 0;
+            padding: 0;
+            li{
+                color: yellow;
+            }
+        }
+    }
+    
+}
+.hidden {
+    left: -1500px;
+}

@@ -1,0 +1,32 @@
+.container-table{
+    background-color: white;
+    color: black;
+    padding:10px ;
+    text-align: left;
+    ul{
+        list-style: none;
+    }
+    table{
+        width: 100%;
+    }
+    th {
+        border: 1px solid black;
+        text-align: center;
+        padding: 10px ;
+        font-size: 1.5em;
+        background-color: red;
+    }
+    td {
+        text-align: center;
+        font-size: 1.2em;
+        font-weight: bold;
+        text-transform: capitalize;
+        border-bottom: 1px solid grey;
+        height: 80px;
+    }
+    .buttons-table{
+        button {
+            margin: 10px;
+        }
+    }
+}

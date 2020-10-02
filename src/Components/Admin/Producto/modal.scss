@@ -1,0 +1,22 @@
+.container-modal-prod {
+  width: 500px;
+  .form-modal-prod {
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  .form-group-prod {
+    margin-bottom: 10px;
+  }
+  .header-modal {
+    position: relative;
+    button {
+      position: absolute;
+      top: -15px;
+      right: 5px;
+    }
+  }
+  .add-sabores {
+    display: flex;
+    justify-content: space-between;
+  }
+}

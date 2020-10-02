@@ -1,0 +1,34 @@
+.info-delivery{
+    position: relative;
+    height: 150px;
+    max-width: 500px;
+    margin: auto;
+    img{
+        width: 100%;
+        height: 100%;
+    }
+    
+}
+.image-social{
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
+    max-width: 500px;
+
+    div{
+        padding-left: 8px;
+        padding-right: 8px;
+        display: flex;
+        justify-content: space-between;
+    }
+    img{
+        border-radius: 20px;
+        width: 55px;
+        height: 55px;
+    }
+}
+@media screen and (min-width:768px) {
+    .info-delivery{
+        display: none;
+    }
+}

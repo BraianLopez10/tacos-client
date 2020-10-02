@@ -1,0 +1,29 @@
+.admin-section{
+    height: 100vh;
+    h1{
+        margin: 0;
+        padding:0 ;
+        color: white;
+        text-align:center ;
+    }
+}
+
+.menu-admin {
+    margin: auto;
+    text-align: center;
+    width: 60%;
+    padding: 50px;
+    li {
+        display: inline-block ;
+        margin-left: 40px;
+        border: 1px solid black;
+        padding: 10px ;
+        background-color: white;
+        width: 100px;
+        text-align: center;
+        a {
+            text-decoration: none;
+            color: black;
+        }
+    }
+}

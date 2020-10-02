@@ -1,0 +1,39 @@
+.header-mb{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    background-color:#181715;
+    border-bottom: 2px solid #3d3c3a;
+    button {
+        position: fixed;
+        z-index: 9999;
+        outline: none;
+        right: 0;
+        top: 10px;
+        margin-right: 20px;
+        background-color: yellow;
+        border: 0;
+        border-radius: 10px;
+    }
+}
+.header-mb-img-container{
+    height: 80px;
+    width: 250px;
+    display: inline-block;
+    img {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+    }
+}
+
+// @media screen and (min-width:425px){
+//     .header-mb-img-container{
+//         border: 1px solid red;
+//         height: 40px;
+//         width: 40px;
+//         border-radius: 10px;
+//         margin: 0;
+//         margin-left: 10px;
+//     }
+// }

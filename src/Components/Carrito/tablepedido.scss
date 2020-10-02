@@ -1,0 +1,15 @@
+.container-table-cart {
+	.text-hd {
+		font-family: monospace;
+		font-size: 1.2em;
+		font-weight: lighter;
+	}
+	table {
+		width: 100%;
+	}
+	table tr {
+		border-bottom: 1px solid gray;
+	}
+	margin-top: 10px;
+	border-top: 1px solid black;
+}
