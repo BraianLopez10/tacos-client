@@ -1,28 +1,29 @@
-.carrousel{
-    display: none;
-    flex-wrap: wrap;
-    box-sizing: border-box;
-    margin-bottom: 30px;
-    .carrousel-img{
-        max-width: 450px;
-        height: 300px;
-        img {
-            object-fit: fill;
-            width: 100%;
-            height: 100%;
-        }
+.carrousel {
+  display: none;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  .carrousel-img {
+    width: 100%;
+    height: 300px;
+    margin: 0 auto;
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 100%;
     }
-    .tipo-pago{
-        width: 200px;
-        text-align: center;
-        img{
-            margin-top: 30px;
-        }
+    .image-abs {
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 100px;
+      height: 40px;
     }
+  }
 }
-@media screen and ( min-width:768px) {
-    .carrousel{
-        
-        display: flex;
-    }
+@media screen and (min-width: 768px) {
+  .carrousel {
+    display: flex;
+  }
 }
