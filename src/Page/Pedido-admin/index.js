@@ -57,7 +57,7 @@ export const Pedidos = () => {
                 <td>{moment(p.createdAt).format("MMMM Do dddd, h:mm:ss a")}</td>
                 <td
                   style={
-                    p.info_pago.status
+                    p.info_pago.status === "approved"
                       ? { backgroundColor: "green", color: "white" }
                       : { backgroundColor: "red", color: "black" }
                   }

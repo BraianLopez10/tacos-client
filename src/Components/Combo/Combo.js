@@ -29,7 +29,7 @@ export const Combo = (props) => {
         <Button
           variant='contained'
           fullWidth
-          style={{ backgroundColor: "#132743" }}
+          style={{ backgroundColor: "#132743", height: "60px" }}
         >
           <Link
             to={`/combo/${comboData.slug}`}

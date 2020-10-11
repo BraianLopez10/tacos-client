@@ -5,7 +5,7 @@ import { AdminRoute } from "./Routes/AdminRoute"
 import { Switch } from "react-router-dom"
 import "./app.scss"
 import { PedidoWithContext } from "./Page/Pedido-combo"
-import { Carrito } from "./Page/Carrito"
+import { CarritoPage } from "./Page/Carrito"
 // ADMIN
 import { Combos as ComboAdmin } from "./Page/Combos-admin"
 import { Pedidos } from "./Page/Pedido-admin"
@@ -29,8 +29,8 @@ function App() {
           component={PageCombos}
           title='Nuestros Combos'
         />
-        <SectionRoute path='/carrito' exact component={Carrito} />
-        <SectionRoute path='/carrito/:state' exact component={Carrito} />
+        <SectionRoute path='/carrito' exact component={CarritoPage} />
+        <SectionRoute path='/carrito/:state' exact component={CarritoPage} />
         <SectionRoute path='/' exact component={Home} />
         <AdminRoute path='/admin/productos/:slug' exacts component={Edit} />
         <AdminRoute path='/admin/productos' exacts component={Productos} />
