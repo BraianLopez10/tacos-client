@@ -9,7 +9,6 @@
   }
   &__footer {
     @include flex;
-    font-weight: 700;
   }
   &__title {
     color: gray;
@@ -29,10 +28,11 @@
     }
   }
   &__total {
-    border: 1px solid red;
     padding: 10px;
     display: flex;
     justify-content: space-between;
+    background-color: #132743;
+    color: white;
     align-items: center;
     &-precio {
       font-size: 1.3em;

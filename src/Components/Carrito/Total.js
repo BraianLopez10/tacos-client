@@ -4,10 +4,31 @@ export const Total = (props) => {
   const { total, items } = props
   return (
     <div className='total-carrito'>
-      <h3>TOTAL CARRITO</h3>
+      <h3 style={{ backgroundColor: "#edc988", padding: "10px" }}>
+        TOTAL CARRITO
+      </h3>
       {items.map((p, index) => {
         return (
-          <React.Fragment key={index}>
+          <div
+            key={index}
+            style={{
+              backgroundColor: "#f8efd4",
+              padding: "5px",
+            }}
+          >
+            <p
+              style={{
+                padding: "5px",
+                margin: 0,
+                color: "white",
+                borderRadius: "5px",
+                display: "inline-block",
+                backgroundColor: "#d7385e",
+                width: "auto",
+              }}
+            >
+              Item: {index + 1}
+            </p>
             <div className='total-carrito__header'>
               <p>{p.name}</p>
               <div className='total-carrito__precio'>
@@ -36,16 +57,17 @@ export const Total = (props) => {
 
                 <div className='total-carrito__footer'>
                   <p>TOTAL CON EXTRAS</p>
-                  <div className='total-carrito__precio'>
+                  <div
+                    style={{ fontWeight: "700" }}
+                    className='total-carrito__precio'
+                  >
                     <span>$</span>
                     <span>{p.precioTotal}</span>
                   </div>
                 </div>
-
-                <hr></hr>
               </>
             )}
-          </React.Fragment>
+          </div>
         )
       })}
       <div className='total-carrito__total'>

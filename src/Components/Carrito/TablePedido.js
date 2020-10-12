@@ -20,7 +20,7 @@ export const TablePedido = (props) => {
           {items.map((p, index) => {
             return (
               <tr key={index} className='tr-table'>
-                <td>{p.name}</td>
+                <td style={{ textAlign: "left" }}>{p.name}</td>
                 <td className='td-detalle'>
                   <DetallePedido
                     detallePedido={p.detallePedido}

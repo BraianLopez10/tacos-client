@@ -26,8 +26,7 @@ export const DetallePedido = ({ detallePedido }) => {
                       marginLeft: "1px",
                     }}
                   >
-                    {" "}
-                    {`${s.sabor} x${s.cant}`}
+                    {`${s.sabor} X${s.cant}`}
                   </span>
                 )
               })}
