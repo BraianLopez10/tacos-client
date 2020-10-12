@@ -1,14 +1,24 @@
 import React from "react"
-import { Button, Paper, Input } from "@material-ui/core"
+import { Button, Paper } from "@material-ui/core"
 import "./login.scss"
 export const Login = () => {
   return (
-    <Paper className='container-login'>
-      <form className='form-login'>
-        <Input type='text' placeholder='Usuario'></Input>
-        <Input type='password' placeholder='Contraseña'></Input>
-        <Button variant='outlined'>Iniciar Sesión</Button>
+    <div className='login'>
+      <form className='login__form'>
+        <input
+          className='login__form-input'
+          type='text'
+          placeholder='Usuario'
+        ></input>
+        <input
+          className='login__form-input'
+          type='password'
+          placeholder='Contraseña'
+        ></input>
+        <button className='login__form-button' variant='outlined'>
+          Iniciar Sesión
+        </button>
       </form>
-    </Paper>
+    </div>
   )
 }

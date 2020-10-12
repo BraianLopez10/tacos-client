@@ -21,6 +21,9 @@ export const RightBar = (props) => {
         <Link to='/contacto'>
           <li onClick={props.handleOpen}>Contacto</li>
         </Link>
+        <Link to='/admin'>
+          <li onClick={props.handleOpen}>Acceder</li>
+        </Link>
       </ul>
       <div className='redes-right'>
         <h4>Seguinos</h4>

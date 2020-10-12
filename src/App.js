@@ -2,7 +2,7 @@ import React from "react"
 import { Home } from "./Page/Home"
 import { SectionRoute } from "./Routes/SectionRoute"
 import { AdminRoute } from "./Routes/AdminRoute"
-import { Switch } from "react-router-dom"
+import { Switch, Route } from "react-router-dom"
 import "./app.scss"
 import { PedidoWithContext } from "./Page/Pedido-combo"
 import { CarritoPage } from "./Page/Carrito"
@@ -18,7 +18,7 @@ function App() {
   return (
     <div className='App'>
       <Switch>
-        <AdminRoute path='/admin' exact component={Login}></AdminRoute>
+        <Route path='/admin' exact component={Login}></Route>
         <AdminRoute path='/admin/combos/:slug' exact component={EditCombo} />
         <AdminRoute path='/admin/combos' exact component={ComboAdmin} />
         <AdminRoute path='/admin/pedidos' exact component={Pedidos} />
