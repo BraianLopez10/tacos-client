@@ -1,5 +1,8 @@
 import axios from "axios"
-
+if (localStorage.getItem("token")) {
+  const token = localStorage.getItem("token")
+  axios.defaults.headers.common["Authorization"] = token
+}
 const url = "http://192.168.0.75:4000/api/v1"
 // PRODUCTOS----------------------------------->
 export const getProductos = () => {
@@ -203,5 +206,40 @@ export const getAllPedidos = () => {
       .catch((err) => {
         reject(err)
       })
+  })
+}
+
+export const login = (data) => {
+  return new Promise((resolve, reject) => {
+    axios({
+      method: "POST",
+      url: `${url}/auth/login`,
+      data: {
+        ...data,
+      },
+      headers: { "Content-Type": "application/json" },
+    })
+      .then((response) => {
+        resolve(response.data)
+      })
+      .catch((err) => {
+        reject(err)
+      })
+  })
+}
+export const lostpass = (data) => {
+  return new Promise((resolve, reject) => {
+    axios({
+      method: "POST",
+      data: {
+        ...data,
+      },
+      url: `${url}/auth/lostpass`,
+      headers: { "Content-Type": "application/json" },
+    })
+      .then((response) => {
+        resolve(response.data)
+      })
+      .catch((err) => reject(err))
   })
 }
