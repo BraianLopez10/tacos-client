@@ -3,9 +3,14 @@ import DeleteOutlineIcon from "@material-ui/icons/DeleteOutline"
 import { Button } from "@material-ui/core"
 import "./tablepedido.scss"
 import { DetallePedido } from "./DetallePedido"
+import {useCarritoContext} from '../../Context/CarritoContext'
 export const TablePedido = (props) => {
   const { items } = props
-
+  const {remove} = useCarritoContext()
+  const deleteItemCarrito = (slug) => {
+    console.log("object")
+    remove(slug)
+  }
   return (
     <div className='container-cart'>
       <table className='container-cart__table'>
@@ -27,7 +32,7 @@ export const TablePedido = (props) => {
                   ></DetallePedido>
                 </td>
                 <td>
-                  <Button variant='outlined'>
+                  <Button variant='outlined' onClick={()=> deleteItemCarrito(p.slug)}>
                     <DeleteOutlineIcon />
                   </Button>
                 </td>

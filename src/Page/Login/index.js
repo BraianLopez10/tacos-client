@@ -18,11 +18,15 @@ export const Login = () => {
     if (!dataLogin.username || !dataLogin.password) {
       return false
     }
-    let response = await loginApi(dataLogin)
-    if (response.status === 200) {
-      console.log(response)
-      localStorage.setItem("token", `bearer ${response.body}`)
-      window.location.reload()
+    try{
+      let response = await loginApi(dataLogin)
+      if (response.status === 200) {
+        console.log(response)
+        localStorage.setItem("token", `bearer ${response.body}`)
+        window.location.reload()
+      }
+    }catch(err){
+      console.log(err)
     }
   }
 
@@ -30,13 +34,17 @@ export const Login = () => {
     if (!dataLogin.password || !dataLogin.username || !secret) {
       return false
     }
-
     const data = {
       ...dataLogin,
       secret,
     }
-    let response = await lostpassApi(data)
-    console.log(response)
+    try{
+      let response = await lostpassApi(data)
+      console.log(response)
+
+    }catch(err){
+      console.log(err)
+    }
   }
 
   const chageinputsecret = (e) => {
