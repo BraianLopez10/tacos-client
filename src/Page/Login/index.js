@@ -1,8 +1,6 @@
-import React, { useEffect, useState } from "react"
-import { Button, Paper } from "@material-ui/core"
+import React, { useState } from "react"
 import { login as loginApi, lostpass as lostpassApi } from "../../Services/Api"
 import "./login.scss"
-import { ClassSharp } from "@material-ui/icons"
 export const Login = () => {
   const [resetPass, setResetPass] = useState(false)
   const handleResetPass = () => {
@@ -18,14 +16,14 @@ export const Login = () => {
     if (!dataLogin.username || !dataLogin.password) {
       return false
     }
-    try{
+    try {
       let response = await loginApi(dataLogin)
       if (response.status === 200) {
         console.log(response)
         localStorage.setItem("token", `bearer ${response.body}`)
         window.location.reload()
       }
-    }catch(err){
+    } catch (err) {
       console.log(err)
     }
   }
@@ -38,12 +36,9 @@ export const Login = () => {
       ...dataLogin,
       secret,
     }
-    try{
+    try {
       let response = await lostpassApi(data)
-      console.log(response)
-
-    }catch(err){
-      console.log(err)
+    } catch (err) {
     }
   }
 

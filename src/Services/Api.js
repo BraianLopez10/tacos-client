@@ -3,7 +3,12 @@ if (localStorage.getItem("token")) {
   const token = localStorage.getItem("token")
   axios.defaults.headers.common["Authorization"] = token
 }
-const url = "http://192.168.0.75:4000/api/v1"
+let url;
+if (process.env.NODE_ENV === 'development') {
+  url = "http://localhost:4000/api/v1"
+} else {
+  url = "http://localhost:4000/api/v1"
+}
 // PRODUCTOS----------------------------------->
 export const getProductos = () => {
   return new Promise((resolve, reject) => {
